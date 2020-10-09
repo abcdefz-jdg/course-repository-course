@@ -1,0 +1,18 @@
+title: Course Repository
+description: >-
+  The Course Repository is basically a way of building something alongside the
+  learning curve for this site/tool.
+template:
+  repo: course-repository-template
+  name: course-repository
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
